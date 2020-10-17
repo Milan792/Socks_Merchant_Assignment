@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is an Assignment for Rocket Media Technologies</title>
+</head>
+<body>
+<script>
+function findSocksPair(array_of_socks){
+    array_of_socks.sort(function(a, b){return a - b});
+    var socks_pair = 0;
+    for(var i=0; i<array_of_socks.length - 1; i++){
+        if(array_of_socks[i] === array_of_socks[i+1]){
+            socks_pair++;
+            i++;    
+        }
+    }
+     return socks_pair;
+}
+var array_of_socks1 = [10,10,30,20,30,40,20,30,40];
+var x=findSocksPair(array_of_socks1);
+document.write(x);
+</script>
+</body>
+</html>
