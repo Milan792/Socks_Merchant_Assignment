@@ -5,20 +5,20 @@
 </head>
 <body>
 <script>
-function findSocksPair(array_of_socks){
-    array_of_socks.sort(function(a, b){return a - b});
-    var socks_pair = 0;
-    for(var i=0; i<array_of_socks.length - 1; i++){
-        if(array_of_socks[i] === array_of_socks[i+1]){
+function findSocksPair(array_of_socks){       //Function defination...
+    array_of_socks.sort(function(a, b){return a - b}); //sorting array using compare function..
+    var socks_pair = 0;   // initialize socks_pair value to 0.
+    for(var i=0; i<array_of_socks.length - 1; i++){    // iterate over given array.
+        if(array_of_socks[i] === array_of_socks[i+1]){   compares equal value and equal type items in array
             socks_pair++;
             i++;    
         }
     }
-     return socks_pair;
+     return socks_pair;  //return socks_pair value to function i.e. x.
 }
-var array_of_socks1 = [10,10,30,20,30,40,20,30,40];
-var x=findSocksPair(array_of_socks1);
-document.write(x);
+var array_of_socks1 = [10,10,30,20,30,40,20,30,40];  // input any number array..
+var x=findSocksPair(array_of_socks1);  //function declaration..
+document.write(x);   // display the value of socks_pair.
 </script>
 </body>
 </html>
